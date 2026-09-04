@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 
-const API = "http://localhost:8000/chat";
+/* const API = "http://localhost:8000/chat"; */
+const API = "https://two026-chatbot-backend-73r8.onrender.com/chat";
 
 export default function App() {
   const [msgs, setMsgs] = useState([]);
