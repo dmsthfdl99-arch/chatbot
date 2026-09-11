@@ -51,7 +51,7 @@ createServer(async (request, response) => {
   }
 
   if (request.method !== "GET") return response.writeHead(405).end();
-  const requestedPath = url.pathname === "/" ? "index.html" : url.pathname === "/ui" ? "ui.html" : url.pathname.replace(/^\/+/, "");
+  const requestedPath = (url.pathname === "/" || url.pathname === "/ui") ? "ui.html" : url.pathname.replace(/^\/+/, "");
   const filePath = normalize(join(publicDir, requestedPath));
   if (!filePath.startsWith(publicDir)) return response.writeHead(403).end();
 
