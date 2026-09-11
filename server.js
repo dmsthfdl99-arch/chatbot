@@ -2,7 +2,7 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 
-const port = process.env.PORT || 3333;
+const port = process.env.PORT || 8000;
 const publicDir = join(process.cwd(), "public");
 const kr = (...letters) => String.fromCodePoint(...letters);
 const food = kr(0xc0ac, 0xb8cc);
@@ -33,6 +33,13 @@ const mimeTypes = { ".html": "text/html; charset=utf-8", ".css": "text/css; char
 
 createServer(async (request, response) => {
   const url = new URL(request.url, `http://${request.headers.host}`);
+  response.setHeader("Access-Control-Allow-Origin", "*");
+  response.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (request.method === "OPTIONS") {
+    response.writeHead(204).end();
+    return;
+  }
 
   if (request.method === "POST" && url.pathname === "/api/chat") {
     let body = "";
