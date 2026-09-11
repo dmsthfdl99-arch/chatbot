@@ -2,7 +2,7 @@ import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3333;
 const publicDir = join(process.cwd(), "public");
 const kr = (...letters) => String.fromCodePoint(...letters);
 const food = kr(0xc0ac, 0xb8cc);

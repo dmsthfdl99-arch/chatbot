@@ -8,7 +8,7 @@
 npm start
 ```
 
-브라우저에서 `http://localhost:3000`을 엽니다.
+브라우저에서 `http://localhost:3333`을 엽니다.
 
 ## 구성
 
