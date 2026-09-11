@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mango Chatbot UI</title>
+    <link rel="stylesheet" href="ui.css" />
+  </head>
+  <body>
+    <main class="workspace">
+      <aside class="sidebar">
+        <a class="brand" href="/ui">MANGO CHAT</a>
+        <button id="new-chat" class="new-chat" type="button">+ &#49352; &#45824;&#54868;</button>
+        <p class="section-label">&#45824;&#54868; &#44592;&#47197; (&#52572;&#45824; 3&#44060;)</p>
+        <nav id="session-list" class="session-list" aria-label="&#45824;&#54868; &#44592;&#47197;"></nav>
+        <p class="storage-note">&#45824;&#54868;&#45236;&#50857;&#51008; &#51060; &#48652;&#46972;&#50864;&#51200;&#50640; &#51200;&#51109;&#46121;&#45768;&#45796;.</p>
+      </aside>
+      <section class="chat-panel">
+        <header class="chat-header">
+          <div><p class="eyebrow">&#51228;&#54408; &#46020;&#50864;&#48120;</p><h1 id="session-title">&#49352; &#45824;&#54868;</h1></div>
+          <span class="online"><i></i> ONLINE</span>
+        </header>
+        <section id="messages" class="messages" aria-live="polite"></section>
+        <div class="suggestions" aria-label="&#48736;&#47480; &#51656;&#47928;">
+          <button type="button" data-message="&#52628;&#52380; &#49345;&#54408;">&#52628;&#52380; &#49345;&#54408;</button>
+          <button type="button" data-message="&#49324;&#47308;">&#49324;&#47308;</button>
+          <button type="button" data-message="&#51109;&#45212;&#44048;">&#51109;&#45212;&#44048;</button>
+        </div>
+        <form id="chat-form" class="chat-form">
+          <label class="sr-only" for="message">&#47700;&#49884;&#51648;</label>
+          <input id="message" autocomplete="off" placeholder="&#47700;&#49884;&#51648;&#47484; &#51077;&#47141;&#54616;&#49464;&#50836;" required />
+          <button type="submit">&#51204;&#49569;</button>
+        </form>
+      </section>
+    </main>
+    <script src="ui.js"></script>
+  </body>
+</html>
