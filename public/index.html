@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>망고 챗봇</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="chat-app">
+      <header>
+        <span class="status"></span>
+        <div><h1>망고 챗봇</h1><p>상품을 도와드릴게요</p></div>
+      </header>
+      <section id="messages" class="messages" aria-live="polite">
+        <p class="message bot">안녕하세요! ‘사료’, ‘장난감’, ‘추천 상품’을 입력해 보세요.</p>
+      </section>
+      <div class="quick-questions">
+        <button type="button" data-message="추천 상품">추천 상품</button>
+        <button type="button" data-message="사료">사료</button>
+        <button type="button" data-message="장난감">장난감</button>
+      </div>
+      <form id="chat-form">
+        <label class="sr-only" for="message">메시지</label>
+        <input id="message" autocomplete="off" placeholder="메시지를 입력하세요" required />
+        <button type="submit">전송</button>
+      </form>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
