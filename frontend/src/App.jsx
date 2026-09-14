@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 
 // 로컬 환경과 프로덕션 환경에 맞춘 유연한 API 기본 주소 설정
-const PROD_API = "https://chatbot00-back.onrender.com";
+const PROD_API = "https://pogeun-bot.onrender.com";
 const LOCAL_API = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 const API = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"

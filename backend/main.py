@@ -15,7 +15,7 @@ db.init_db()
 RENDER_EXTERNAL_URL = (
     os.getenv("RENDER_EXTERNAL_URL")
     or os.getenv("KEEP_ALIVE_URL")
-    or "https://chatbot00-back.onrender.com"
+    or "https://pogeun-bot.onrender.com"
 )
 PING_INTERVAL = int(os.getenv("PING_INTERVAL", "600"))  # 기본 10분 (600초)
 

@@ -1,5 +1,6 @@
 # 🐾 포근봇 (PogeunBot) - Hugging Face LLM 기반 감성 AI 챗봇
 
+> **개발자**: 이은솔 (`dmsthfdl99-arch`)  
 > **프로젝트 개요**: FastAPI와 React 19 기반의 풀스택 AI 챗봇 서비스로, 귀엽고 따뜻한 감성의 사용자 인터페이스(UI/UX)와 맥락 인식형 대화(Context-aware Chat) 엔진을 제공합니다.
 
 ---
@@ -63,7 +64,7 @@
 - **Database**: SQLite3 (`backend/chat.db`)
 - **LLM Engine**: Hugging Face Serverless Router (`Qwen/Qwen3-4B-Instruct-2507`)
 - **HTTP Client**: Requests `2.34.2`
-- **Deployment**: Render Web Service (`https://chatbot00-back.onrender.com`)
+- **Deployment**: Render Web Service (`https://pogeun-bot.onrender.com`)
 
 ### Frontend
 - **Framework**: React `19.2.8`
@@ -79,7 +80,7 @@ Render 무료 플랜은 **15분간 외부 인바운드 HTTP 요청이 없으면 
 
 포근봇(PogeunBot)은 외부 모니터링 도구 없이 **백엔드 자체 데몬 스레드**로 이를 원천 방어합니다:
 1. 서버 부팅 시 `threading.Thread(target=keep_alive_worker, daemon=True)` 자동 가동
-2. **10분(600초)** 주기로 자신의 공개 도메인(`https://chatbot00-back.onrender.com/health`)에 GET 요청 전송
+2. **10분(600초)** 주기로 자신의 공개 도메인(`https://pogeun-bot.onrender.com/health`)에 GET 요청 전송
 3. Render 라우터가 인바운드 트래픽으로 인식하여 15분 슬립 타이머를 계속 0으로 리셋
 4. 초경량 `/health` 엔드포인트 응답으로 월간 인스턴스 시간 및 서버 리소스 소모 최소화
 

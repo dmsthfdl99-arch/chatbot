@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 ## React Compiler
 
-The React Compiler is **enabled** in this project using `babel-plugin-react-compiler` (target: 19) in [vite.config.js](file:///C:/Users/PC/Desktop/bon/chatbot/frontend/vite.config.js).
+The React Compiler is **enabled** in this project using `babel-plugin-react-compiler` (target: 19) in `vite.config.js`.
 
 ### Production Build Metrics (Measured)
 - **Build Time**: ~476ms
